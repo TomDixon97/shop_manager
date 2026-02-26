@@ -21,14 +21,15 @@ CREATE SEQUENCE IF NOT EXISTS orders_id_seq;
 CREATE TABLE orders (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255),
+    item_name VARCHAR(255),
     item_id INTEGER,
     amount INTEGER,
     date_placed VARCHAR(255)
 );
 
 
-INSERT INTO items (name, quantity) VALUES ('Apple', 1000);
+INSERT INTO items (name, quantity) VALUES ('Apples', 1000);
 INSERT INTO items (name, quantity) VALUES ('Oranges', 10);
 
-INSERT INTO orders (name, item_id, amount, date_placed)  VALUES ('Tom', 1, 500, '20-02-2026');
+
 
